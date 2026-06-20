@@ -10,4 +10,8 @@ contract MyTokenTest is Test {
     function setUp() public {
         token = new MyToken();
     }
+
+    function invariant_totalSupplyShouldBeZeroWhenNoMiniting() public view{
+       assertEq(token.totalSupply(),0);
+    }
 }

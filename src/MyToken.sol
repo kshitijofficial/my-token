@@ -7,5 +7,9 @@ contract MyToken is ERC20{
    constructor()ERC20("demo","dm"){
       
    }
+
+   // function mintTokens() public {
+   //    _mint(address(this),1000);
+   // }
   
 }

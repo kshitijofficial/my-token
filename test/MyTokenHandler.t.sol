@@ -16,6 +16,7 @@ contract MyHandler is Test {
     }
 
     function transferTokens(uint256 amount) public {
+        amount = bound(amount,0,token.balanceOf(address(this)));
         token.transfer(to,amount);
     }
 }
